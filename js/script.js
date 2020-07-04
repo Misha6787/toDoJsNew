@@ -47,6 +47,13 @@ class Todo {
             this.toDoData.set(newTodo.key, newTodo);
             this.render();
         }
+        if (this.input.value === '') {
+            this.input.classList.add('empty-value');
+            this.input.placeholder = 'Введите новое значение!';
+        } else {
+            this.input.classList.remove('empty-value');
+            this.input.placeholder = 'Какие планы?';
+        }
         this.input.value = '';
     }
 
